@@ -15,19 +15,20 @@ declare type UpdateUserParams = {
   photo: string;
 };
 
-declare type CreateTaskParams = {
-  taskId: string,
-  clerkId: string;
-  name: string;
-  date: Date;
-  recurring: boolean;
-}
+// examples
+// declare type CreateTaskParams = {
+//   taskId: string,
+//   clerkId: string;
+//   name: string;
+//   date: Date;
+//   recurring: boolean;
+// }
 
 
-declare type UpdateTaskParams = {
-  name: string;
-  date: number;
-  month: number;
-  year: number;
-  recurring: boolean;
-};
+// declare type UpdateTaskParams = {
+//   name: string;
+//   date: number;
+//   month: number;
+//   year: number;
+//   recurring: boolean;
+// };

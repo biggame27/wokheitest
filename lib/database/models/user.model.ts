@@ -1,4 +1,4 @@
-// clerkId, email, username, photo, firstName, lastName, planId, creditBalance (just)
+// clerkId, email, username, photo, firstName, lastName, planId (for potential payments?)
 
 import { Schema, model, models } from "mongoose";
 
@@ -31,10 +31,6 @@ const UserSchema = new Schema({
   planId: {
     type: Number,
     default: 1,
-  },
-  creditBalance: {
-    type: Number,
-    default: 10,
   },
 });
 
