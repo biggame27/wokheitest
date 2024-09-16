@@ -13,8 +13,8 @@ const Sidebar = ({children}:SidebarProps) => {
         <div className="flex flex-col w-64 p-10">
           <Link href={"/"}> home </Link>
           <Link href={"/planning"}> planning </Link>
-          <Link href={"/recipe-search"}> profile </Link>
-          <Link href={"/profile"}> recipe search </Link>
+          <Link href={"/recipe-search"}> recipe search </Link>
+          <Link href={"/profile"}> profile </Link>
           <UserButton afterSignOutUrl="/" />
         </div>
       </aside>

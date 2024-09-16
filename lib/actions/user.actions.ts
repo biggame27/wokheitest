@@ -9,11 +9,11 @@ import { handleError } from "../utils";
 // CREATE
 export async function createUser(user: CreateUserParams) {
   try {
-    console.log("bruh")
+    // console.log("bruh")
     await connectToDatabase();
-    console.log("connted")
+    // console.log("connted")
     const newUser = await User.create(user);
-    console.log(newUser);
+    // console.log(newUser);
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
     handleError(error);
@@ -69,26 +69,6 @@ export async function deleteUser(clerkId: string) {
     revalidatePath("/");
 
     return deletedUser ? JSON.parse(JSON.stringify(deletedUser)) : null;
-  } catch (error) {
-    handleError(error);
-  }
-}
-
-// USE CREDITS
-export async function updateCredits(userId: string, creditFee: number) {
-  try {
-    await connectToDatabase();
-
-    const updatedUserCredits = await User.findOneAndUpdate(
-      { _id: userId },
-      // increment by this amount
-      { $inc: { creditBalance: creditFee }},
-      { new: true }
-    )
-
-    if(!updatedUserCredits) throw new Error("User credits update failed");
-
-    return JSON.parse(JSON.stringify(updatedUserCredits));
   } catch (error) {
     handleError(error);
   }
