@@ -20,10 +20,10 @@ const RecipeSearch = () => {
       if (response.ok) {
         setAns(data.output)
       } else {
-        console.error(data.error);
+        // console.error(data.error);
       }
     } catch (error) {
-      console.error('Error:', error);
+      // console.error('Error:', error);
     }
   };
   return (
