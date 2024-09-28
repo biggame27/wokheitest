@@ -7,7 +7,7 @@ const RecipeSearch = () => {
 
   const handleGenerate = async () => {
     try {
-      // console.log("hi")
+      console.log("hi")
       const response = await fetch('/api/gemini', {
         method: 'POST',
         headers: {
